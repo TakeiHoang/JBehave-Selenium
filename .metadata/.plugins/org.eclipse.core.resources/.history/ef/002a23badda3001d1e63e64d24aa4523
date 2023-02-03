@@ -1,0 +1,15 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class GoogleResultPage {
+	@FindBy(css = "a h3")
+	List<String> resultsText;
+
+	public boolean validateIfResultsContainText(String text) {
+		for(String i : resultsText.toString())
+	}
+}

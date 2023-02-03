@@ -1,0 +1,20 @@
+package core.pages;
+
+import core.locators.GoogleLocator;
+import core.selenium.SeleniumHelper;
+
+public class ResultPage extends Commands{
+	private SeleniumHelper helper;
+
+	public ResultPage() {
+		helper = new SeleniumHelper();
+	}
+
+	public void login(String expectedValue) {
+		
+	}
+
+	public String getLoggedinUserName() {
+		return helper.findElement(By.className("profile-link")).getText();
+	}
+}

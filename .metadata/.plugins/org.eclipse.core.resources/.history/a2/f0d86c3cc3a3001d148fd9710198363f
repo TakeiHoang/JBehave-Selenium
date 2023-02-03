@@ -1,0 +1,5 @@
+package core.locators;
+
+public class GoogleLocator {
+	
+}

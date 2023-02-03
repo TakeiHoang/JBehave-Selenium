@@ -1,0 +1,15 @@
+package core.pages;
+
+import core.selenium.SeleniumHelper;
+
+public class HomePage extends Commands{
+	private SeleniumHelper helper;
+
+	public HomePage() {
+		helper = new SeleniumHelper();
+	}
+
+	public void openHomePage() {
+		helper.openUrl("https://www.google.com");
+	}
+}

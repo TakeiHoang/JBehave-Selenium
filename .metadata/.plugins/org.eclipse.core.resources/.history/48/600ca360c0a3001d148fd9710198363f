@@ -1,0 +1,18 @@
+package core.selenium;
+
+import org.openqa.selenium.WebElement;
+
+public class Commands {
+	public void submit(WebElement element) {
+		element.submit();
+	}
+
+	public void type(WebElement element, String string) {
+		element.clear();
+		element.sendKeys(string);
+	}
+
+	public void verifyUserIsLoggedin() {
+
+	}
+}

@@ -1,0 +1,20 @@
+package core;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+
+public class Page {
+	public Page() {
+		PageFactory.initElements(Driver.driver, this);
+	}
+
+	protected boolean isElementPresent(By locator) {
+		Driver.driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+		List<WebElement> elements = Driver.driver.findElements(locator);
+		Driver.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		return elements.size() > 0 && elements.get(0).isDisplayed();
+	}
+}

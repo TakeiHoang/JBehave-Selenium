@@ -1,0 +1,25 @@
+package core.selenium;
+
+import org.jbehave.core.annotations.AfterStory;
+import org.jbehave.core.annotations.BeforeStory;
+import org.openqa.selenium.WebDriver;
+
+import steps.ProjectDriver;
+
+public class SeleniumProvider {
+	private static WebDriver driver;
+
+	@BeforeStory
+	public void createBrowser() {
+		driver = new ProjectDriver(PropertyWebdriver.getDriver());
+	}
+
+	@AfterStory
+	public void closeBrowser() {
+		driver.close();
+	}
+
+	public static WebDriver getDriver() {
+		return driver;
+	}
+}

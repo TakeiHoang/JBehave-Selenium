@@ -1,0 +1,19 @@
+package core.pages;
+
+import core.selenium.SeleniumProvider;
+
+public class Pages {
+	private WebDriver driver;
+
+	public Pages(){
+		this.driver = SeleniumProvider.getDriver();
+	}
+	
+	public HomePage homePage(){
+		return new HomePage();
+	}
+	
+	public ResultPage resultPage(){
+		return new ResultPage();
+	}
+}

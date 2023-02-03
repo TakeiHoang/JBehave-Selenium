@@ -1,0 +1,13 @@
+Narrative:
+In order to log in into Gmail
+As a user
+I want to make sure that log in page works as expected
+
+Scenario: Negative test log in page.
+Given home google page https://google.com
+And gmail authentication form
+When the user has entered wrong test_username and test_password
+And log-in button has been pressed
+Then the user should see corresponding error message:
+|message|
+|Введена електронна адреса чи пароль неправильні. ?|

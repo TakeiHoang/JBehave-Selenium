@@ -1,0 +1,44 @@
+package steps;
+
+import org.openqa.selenium.WebDriver;
+
+public class ProjectDriver implements WebDriver {
+	private WebDriver driver;
+
+	public ProjectDriver(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void get(String url) {
+		driver.get(url);
+	}
+
+	public String getCurrentUrl() {
+		return driver.getCurrentUrl();
+	}
+
+	public String getTitle() {
+		// TODO Auto-generated method stub
+		return driver.getTitle();
+	}
+
+	public List<WebElement> findElements(By by) {
+		return driver.findElements(by);
+	}
+
+	public WebElement findElement(By by) {
+		return driver.findElement(by);
+	}
+
+	public String getPageSource() {
+		return driver.getPageSource();
+	}
+
+	public void close() {
+		driver.close();
+	}
+
+	public void quit() {
+		driver.quit();
+	}
+}

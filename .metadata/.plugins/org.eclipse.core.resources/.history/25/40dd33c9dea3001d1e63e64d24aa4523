@@ -1,0 +1,21 @@
+package steps;
+
+import java.util.Map;
+
+import org.jbehave.core.annotations.*;
+
+import core.Base;
+import pages.GoogleHomePage;
+import pages.GoogleResultPage;
+
+public class GoogleSteps extends Base {
+	private GoogleHomePage googleHomePage;
+	private GoogleResultPage googleResultPage;
+	private Map<String, String> message;
+	
+	@Given("home google page $url")
+    public void givenGoogleBasePage(String url) {
+        googleHomePage = new GoogleHomePage();
+        googleHomePage.open(url);
+    }
+}

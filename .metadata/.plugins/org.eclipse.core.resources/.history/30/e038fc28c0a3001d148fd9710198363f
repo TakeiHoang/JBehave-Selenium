@@ -1,0 +1,24 @@
+package core.pages;
+
+import core.selenium.SeleniumHelper;
+
+public class ResultPage {
+	private SeleniumHelper helper;
+
+	public ResultPage() {
+		helper = new SeleniumHelper();
+	}
+
+	public void login(String user) {
+		helper.findElement(LoginLocator.loginLink).click();
+		String password = new LoginData().getPassword(user);
+		type(helper.findElement(LoginLocator.userName), user);
+		type(helper.findElement(LoginLocator.password), password);
+		submit(helper.findElement(LoginLocator.submit));
+
+	}
+
+	public String getLoggedinUserName() {
+		return helper.findElement(By.className("profile-link")).getText();
+	}
+}
