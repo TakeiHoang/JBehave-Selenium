@@ -1,9 +1,0 @@
-package core.selenium;
-
-public class SeleniumHelper {
-	private WebDriver driver;
-	
-	public SeleniumHelper() {
-		this.setDriver(SeleniumProvider.getDriver());
-	}
-}

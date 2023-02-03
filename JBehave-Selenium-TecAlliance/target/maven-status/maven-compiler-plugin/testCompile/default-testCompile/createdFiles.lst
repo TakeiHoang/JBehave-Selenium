@@ -1,7 +1,0 @@
-pages\GoogleHomePage.class
-pages\GoogleResultPage.class
-GoogleStoriesRunner.class
-core\Base.class
-steps\GoogleSteps.class
-core\Page.class
-core\Driver.class

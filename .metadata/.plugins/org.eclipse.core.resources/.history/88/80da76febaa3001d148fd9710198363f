@@ -1,8 +1,0 @@
-package conditions;
-
-public class ElementsFound implements Condition{
-	private By locator;
-	private WebDriver driver;
-	public ElementIsFound
-
-}
