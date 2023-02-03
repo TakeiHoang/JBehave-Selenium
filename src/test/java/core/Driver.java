@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 
 public class Driver {
@@ -41,7 +42,9 @@ public class Driver {
 		String browser = System.getProperty("test.browser");
 		if (browser.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
-			driver = new FirefoxDriver();
+			FirefoxOptions firefoxOptions = new FirefoxOptions();
+			firefoxOptions.addPreference("marionette", true);
+			driver = new FirefoxDriver(firefoxOptions);
 		} else if (browser.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 			ChromeOptions chromeOptions = new ChromeOptions();

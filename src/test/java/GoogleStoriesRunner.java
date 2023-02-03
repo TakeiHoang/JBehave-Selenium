@@ -38,7 +38,7 @@ public class GoogleStoriesRunner extends JUnitStories {
 	public Configuration configuration() {
 		Class<? extends Embeddable> embeddableClass = this.getClass();
 		Properties viewResources = new Properties();
-        viewResources.put("decorateNonHtml", "true");
+		viewResources.put("decorateNonHtml", "true");
 		// Start from default ParameterConverters instance
 		ParameterConverters parameterConverters = new ParameterConverters();
 		// factory to allow parameter conversion and loading from external resources
