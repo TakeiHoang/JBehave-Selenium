@@ -1,3 +1,8 @@
+Search functionality for google.com
+
+Meta:
+@category e2e
+
 Narrative:
 In order to get search result
 As a user

@@ -7,6 +7,7 @@ public class Base {
 	@BeforeScenario
 	public void initialization() {
 		Driver.init();
+		Driver.driver.manage().window().maximize();
 	}
 
 	@AfterScenario
